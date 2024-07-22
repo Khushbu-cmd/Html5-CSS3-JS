@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata and title of the webpage -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="student.css">
+  <title>Student login</title>
+</head>
+<body>
+<div class="container">  
+<!-- Form for student login details -->
+  <form method="get"  id="form" onsubmit="return validateForm()">
+    <fieldset> 
+    <legend style="text-align: center;">Student Form</legend>
+    <div class="form-group">
+    <!-- Input for Student ID -->
+      <label for="student_id">Student_id:</label>
+      <input type="number" id="id" name="student_id" required><br><br>
+    </div>
+    <div class="form-group">
+    <!-- Input for Student Name -->
+      <label for="student_name">Name:</label>
+      <input type="text" id="name" name="student_name" required><br><br>
+    </div>
+    <div class="form-group">
+    <!-- Dropdown for selecting Department -->
+      <label for="departments">Department:</label>
+      <select id="department" name="department">
+      <option value="">Choose a department</option>
+      <option value="CS">CS</option>
+      <option value="CE">CE</option>
+      <option value="IS">IS</option>
+      </select><br><br>
+    </div>
+    <div class="form-group">
+    <!-- Checkboxes for selecting Subjects -->
+      <label>Subjects:</label>
+      <input type="checkbox" id="interest1" name="interests" value="DA">
+      <label for="subject_da"> DA</label>
+      <input type="checkbox" id="interest2" name="interests" value="DS">
+      <label for="subject_ds"> DS</label>
+      <input type="checkbox" id="interest3" name="interests" value="DE">
+      <label for="subject_de"> DE</label><br><br>
+    </div> 
+    <div class="form-group">   
+    <!-- Radio buttons for selecting Gender -->
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="Male" required>
+      <label for="gender_male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female" required>
+      <label for="gender_female">Female</label>
+      <input type="radio" id="other" name="gender" value="Other" required>
+      <label for="gender_other">Other</label><br><br>
+    </div>
+    <div class="form-group">
+    <!-- Textarea for description -->
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" maxlength="50" required></textarea>
+    </div>
+    <!-- Submit button-->
+    <div id="error-message"></div>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+</div>
+<script src="student.js"></script>
+</body>
+</html>
